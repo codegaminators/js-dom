@@ -1,39 +1,62 @@
+// JS DOM
+
 const demo = document.getElementById("demo");
+const list = document.querySelectorAll("li");
+const first = document.querySelector(".first");
 
-demo.innerHTML = "Hello";
-demo.textContent = "Hello world";
-demo.textContent = "Hello world 3";
-
-demo.className = "my-style";
-
-const disappear = () => {
-  demo.classList.add("hide");
-};
-const appear = () => {
-  demo.classList.remove("hide");
+const anything = () => {
+  first.classList.toggle("hide");
 };
 
-const toggle = () => {
-  demo.classList.toggle("hide");
-};
-
-demo.addEventListener("click", () => {
-  demo.classList.toggle("red");
+list.forEach((li) => {
+  li.children[0].addEventListener("click", () => {
+    li.style.display = "none";
+  });
 });
-// demo.className = "hide";
 
-// demo.style.fontSize = "4rem";
-// demo.style.fontWeight = "bold";
-// demo.style.color = "green";
+// const h1 = document.querySelector(".first");
 
-// const tagName = document.getElementsByTagName("h1");
-// const className = document.getElementsByClassName("first");
+// const btn = document.createElement("button");
+// btn.textContent = "Click me";
+
+// demo.appendChild(btn);
+
+// btn.addEventListener("click", () => {
+//   h1.style.color = "red";
+// });
+// demo.innerHTML = "Hello world";
+// demo.textContent = "Hello world 3";
+
+// // demo.style.fontSize = "4rem";
+
+// demo.className = "my-style";
+
+// const add = () => {
+//   demo.classList.add("upper");
+// };
+// const remove = () => {
+//   demo.classList.remove("upper");
+// };
+
+// const toggle = () => {
+//   demo.classList.toggle("hide");
+// };
+
+// demo.addEventListener("mouseenter", () => {
+//   demo.classList.toggle("my-color");
+// });
+
+// demo.classList.add("upper");
+// demo.classList.remove("my-style");
+// console.log(demo);
+
+// demo.style.height = "100px";
+// demo.style.width = "30%";
+// demo.style.backgroundColor = "red";
+
+// const tagName = document.getElementsByTagName("p");
+// const className = document.getElementsByClassName("second");
 // const id = document.getElementById("demo-id");
-// const qs = document.querySelector("#demo-id");
+
+// const qs = document.querySelector("h1");
 // const qsa = document.querySelectorAll("h1");
-
-// console.log(tagName[2]);
-// console.log(className[0]);
-// console.log(id);
-
-// console.log(qs);
