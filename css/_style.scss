@@ -1,0 +1,27 @@
+body {
+  background-color: $warning;
+
+  .container {
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form-wrapper {
+      width: 100%;
+      max-width: 568px;
+      margin: 0 auto;
+    }
+  }
+}
+
+#bio {
+  text-align: center;
+  h3 {
+    text-align: center;
+    font-weight: bold;
+  }
+  li {
+    list-style: none;
+  }
+}

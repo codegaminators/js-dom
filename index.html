@@ -4,21 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
     <title>Javascript DOM</title>
 </head>
 
 <body>
-    <h1 class="first">Document Object Model</h1>
-    <button onclick="anything()">Toggle Me</button>
-    <ul class="item-wrapper">
-        <li>Item 1 <span>x</span></li>
-        <li>Item 2 <span>x</span></li>
-        <li>Item 3 <span>x</span></li>
-        <li>Item 4 <span>x</span></li>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <a href="#" class="navbar-brand">MTN</a>
+            <ul class="nav d-none d-md-flex">
+                <li class="nav-item"><a href="#" class="nav-link text-light">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-light">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-light">Contact</a></li>
+            </ul>
+            <a href="#" class="d-md-none text-light"><i class="fas fa-bars toggler "></i></a>
+        </nav>
+        <ul class="nav mobile-nav d-md-none d-none flex-column text-right">
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="form-wrapper">
+            <div id="bio" class="userbio">
 
-    </ul>
-    <div id="demo"></div>
+
+            </div>
+            <form id="myform">
+                <h6 class="text-center text-uppercase font-weight-bold">Sign in</h6>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" name="username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+                <button class="btn btn-success btn-block">Sign in</button>
+            </form>
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
 
 
 

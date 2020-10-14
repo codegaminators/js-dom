@@ -1,63 +1,64 @@
-// JS DOM
+const users = [
+  {
+    id: "6caaeede-a463-4ca4-812b-27cdd408b2e5",
+    first_name: "Vita",
+    last_name: "Klageman",
+    email: "vklageman1i@digg.com",
+    gender: "Female",
+    password: "password1",
+    username: "user1",
+  },
+  {
+    id: "bec7124d-6822-414d-ae52-491ec9e8ecc6",
+    first_name: "Keriann",
+    last_name: "Di Francecshi",
+    email: "kdifrancecshi1j@edublogs.org",
+    gender: "Female",
+    password: "password2",
+    username: "user2",
+  },
+  {
+    id: "fb2a1d52-d3e6-442c-b808-533ce2f50ecd",
+    first_name: "Ramsay",
+    last_name: "Chappell",
+    email: "rchappell1k@icio.us",
+    gender: "Male",
+    password: "password3",
+    username: "user3",
+  },
+];
+const form = document.querySelector("#myform");
+const toggler = document.querySelector(".toggler");
+const h3 = document.createElement("h3");
+const ul = document.createElement("ul");
+const li = document.createElement("li");
+const bio = document.querySelector("#bio");
 
-const demo = document.getElementById("demo");
-const list = document.querySelectorAll("li");
-const first = document.querySelector(".first");
-const h1 = document.createElement("h1");
-
-const anything = () => {
-  first.classList.toggle("red");
-};
-
-list.forEach((li) => {
-  li.children[0].addEventListener("click", () => {
-    li.style.display = "none";
-  });
+toggler.addEventListener("click", () => {
+  const mobileNav = document.querySelector(".mobile-nav");
+  mobileNav.classList.toggle("d-none");
 });
 
-// const h1 = document.querySelector(".first");
+form.addEventListener("submit", (event) => {
+  const username = document.getElementsByName("username")[0];
+  const password = document.getElementsByName("password")[0];
+  event.preventDefault();
+  const data = users.find(
+    (user) =>
+      user.username === username.value && user.password === password.value
+  );
+  if (data) {
+    alert(`Welcome ${data.first_name} ${data.last_name}`);
+    handleSuccess(data);
+  } else alert("Username or password is not correct");
+});
 
-// const btn = document.createElement("button");
-// btn.textContent = "Click me";
+function handleSuccess(info) {
+  h3.textContent = `Welcome ${info.first_name}`;
 
-// demo.appendChild(btn);
+  li.textContent = `Name: ${info.first_name} ${info.last_name}`;
 
-// btn.addEventListener("click", () => {
-//   h1.style.color = "red";
-// });
-// demo.innerHTML = "Hello world";
-// demo.textContent = "Hello world 3";
-
-// // demo.style.fontSize = "4rem";
-
-// demo.className = "my-style";
-
-// const add = () => {
-//   demo.classList.add("upper");
-// };
-// const remove = () => {
-//   demo.classList.remove("upper");
-// };
-
-// const toggle = () => {
-//   demo.classList.toggle("hide");
-// };
-
-// demo.addEventListener("mouseenter", () => {
-//   demo.classList.toggle("my-color");
-// });
-
-// demo.classList.add("upper");
-// demo.classList.remove("my-style");
-// console.log(demo);
-
-// demo.style.height = "100px";
-// demo.style.width = "30%";
-// demo.style.backgroundColor = "red";
-
-// const tagName = document.getElementsByTagName("p");
-// const className = document.getElementsByClassName("second");
-// const id = document.getElementById("demo-id");
-
-// const qs = document.querySelector("h1");
-// const qsa = document.querySelectorAll("h1");
+  bio.appendChild(h3);
+  bio.appendChild(li);
+  form.className = "d-none";
+}
