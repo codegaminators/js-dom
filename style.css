@@ -27,3 +27,6 @@ li span:hover {
 .hide {
   display: none;
 }
+.red {
+  color: red;
+}

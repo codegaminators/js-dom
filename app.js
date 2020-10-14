@@ -3,9 +3,10 @@
 const demo = document.getElementById("demo");
 const list = document.querySelectorAll("li");
 const first = document.querySelector(".first");
+const h1 = document.createElement("h1");
 
 const anything = () => {
-  first.classList.toggle("hide");
+  first.classList.toggle("red");
 };
 
 list.forEach((li) => {
