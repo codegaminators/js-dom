@@ -1,27 +1,32 @@
 body {
   background-color: $warning;
+}
 
-  .container {
-    height: 80vh;
+.show {
+  width: 30% !important;
+  transition: width 0.5s ease-in-out;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .form-wrapper {
-      width: 100%;
-      max-width: 568px;
-      margin: 0 auto;
+header {
+  position: relative;
+  .mobile-wrapper {
+    position: absolute;
+    right: 0;
+    background-color: $dark;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+    height: 100vmin;
+    text-align: center;
+    li {
+      a {
+        color: $light;
+      }
     }
   }
 }
 
-#bio {
-  text-align: center;
-  h3 {
-    text-align: center;
-    font-weight: bold;
-  }
-  li {
-    list-style: none;
-  }
+#form {
+  width: 100%;
+  max-width: 568px;
+  margin: 0 auto;
 }
